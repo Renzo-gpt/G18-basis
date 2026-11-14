@@ -75,9 +75,92 @@
             </table>
         </aside>
         <section id="compra">
-            <h2>Carrito de compras</h2>
-            <h3>Carrito de compras subtitulo</h3>
-    </main>
-</body>
+            <h2>Finalizar compra</h2>
+                <form>
+                    <fieldset>
+                        <legend>Datos de envio</legend>
+                        <p>
+                            <label for="nombre">Nombre completo</label><br/>
+                            <input type="text" id="nombre" name="nombre" 
+                            autocomplete="name" placeholder="Ej.: Brend Salazar"
+                            required minlength="3">
+                        </p>
+                        <p>
+                            <label for="email">Correo electronico</label><br/>
+                            <input type="email" id="email" name="email" required autocomplete="email">
+                        </p>
+                        <p>
+                            <label for="direccion">Direccion</label><br/>
+                            <input type="text" id="direccion" name="direccion" required 
+                            minlength="5" autocomplete="address-level1">
+                        </p>
+                        <p>
+                            <label for="ciudad">Ciudad</label><br/>
+                            <input type="text" id="ciudad" name="ciudad" required autocomplete="address-level2" list="ciudades">
+                            <datalist id="ciudades">
+                                <option value="Lima"></option>
+                                <option value="Bogota"></option>
+                                <option value="Ciudad de Mexico"></option>
+                                <option value="Buenos Aires"></option>
+                                <option value="Madrid"></option>
+                            </datalist>
+                        </p>
+                        <p>
+                            <label for="pais">Pais</label><br/>
+                            <select id="pais" name="pais" required>
+                                <option value="">-Elige un pais-</option>
+                                <option value="pe">Peru</option>
+                                <option value="co">Colombia</option>
+                                <option value="mx">Mexico</option>
+                                <option value="ar">Argentina</option>
+                                <option value="es">Spain</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="telefono">Telefono</label><br/>
+                            <input type="tel" id="telefono" name="telefono" required autocomplete="tel"
+                            pattern="[0-9]{7,}" title="Solo numeros, al menos 7 digiitos">
+                        </p>
+                        <p>
+                            <label for="fecha">Fecha de entrega deseada</label><br>
+                            <input type="date" id="fecha" name="fecha">
+                        </p>
+                        <p>
+                            <label for="cantidad">Cantidad de unidades</label><br>
+                            <input type="number" id="cantidad" min="1" max="10" step="1" value="1" required>
+                        </p>
+                        <p>
+                            <label for="notas">Notas para el repartidor (opcional)</label><br>
+                            <textarea name="notas" id="notas" rows="3" maxlength="200"></textarea>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Metodo de pago</legend>
+                        <p>
+                            <input type="radio" id="pago-tarjeta" name="pago" value="tarjeta" required>
+                            <label for="pago-tarjeta">Tarjeta</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="pago-paypal" name="pago" value="paypal">
+                            <label for="pago-paypal">PayPal</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="pago-contra" name="pago" value="contraentrega">
+                            <label for="pago-contra">Contra entrega</label>
+                        </p>
+                    </fieldset>
+                    <p>
+                        <input type="checkbox" required id="terminos" name="terminos">
+                        <label for="terminos">Acepto los terminos y condiciones</label>
+                    </p>
+                    <button type="submit">Confirmar pedido</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2026 TechCart - Proyecto G18</p>
+            <p>Datos e imagenes de <a href="https://dummyjson.com" target="_blank" rel="noopener">DummyJSON</a></p>
+            <address>Contacto: <a href="edwardhc1997@gmail.com">edwardCarlos.com</a></address>
+        </footer>
+    </body>
 </html>
-
